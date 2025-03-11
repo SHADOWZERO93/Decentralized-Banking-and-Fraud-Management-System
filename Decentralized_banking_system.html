@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><b>Decentralized Bank</b></title>
+    <link rel="stylesheet" href="readme.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/web3/1.7.4/web3.min.js"></script>
+</head>
+<body>
+
+    <h2>Welcome to Decentralized Banking</h2>
+    
+    <button onclick="connectWallet()">Connect Wallet</button>
+    <p id="wallet Addrress">Not Connected</p>
+
+    <h3>Deposit Funds</h3>
+    <input type="number" id="amount" placeholder="Enter Amount (ETH)">
+    <button onclick="depositFunds()">Deposit</button>
+
+    <h3>Check Balance</h3>
+    <button onclick="checkBalance()">Get Balance</button>
+    <p id="balance"></p>
+
+    <h3>Withdraw Funds</h3>
+    <input type="number" id="withdrawAmount" placeholder="Enter Amount (ETH)">
+    <button onclick="withdrawFunds()">Withdraw</button>
+
+    <script src="readme.js"></script>
+
+</body>
+</html>

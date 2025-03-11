@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fraud Detection</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(to right, #1e3c72, #2a5298);
+            color: white;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            max-width: 400px;
+            width: 90%;
+        }
+        h2 {
+            margin-bottom: 20px;
+        }
+        input, select, button {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+        }
+        input, select {
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+        }
+        input::placeholder {
+            color: rgba(255, 255, 255, 0.7);
+        }
+        button {
+            background: #28a745;
+            color: white;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        button:disabled {
+            background: gray;
+        }
+        #message {
+            margin-top: 15px;
+            font-size: 14px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>🔍 Decentralized Fraud Detection</h2>
+        <input type="text" id="receiver" placeholder="📩 Receiver Address">
+        <input type="text" id="amount" placeholder="💰 Amount (ETH)">
+        <select id="status">
+            <option value="Safe">✅ Safe</option>
+            <option value="Suspicious">⚠ Suspicious</option>
+            <option value="Fraudulent">❌ Fraudulent</option>
+        </select>
+        <input type="text" id="reason" placeholder="✍ Reason">
+        <button onclick="recordTransaction()" id="recordBtn">📌 Record Transaction</button>
+        <p id="message"></p>
+    </div>
+    
+    <script>
+        function recordTransaction() {
+            const btn = document.getElementById('recordBtn');
+            btn.disabled = true;
+            document.getElementById("message").innerText = "Recording Transaction...";
+            
+            setTimeout(() => {
+                alert("Transaction Recorded (Simulation Only)");
+                document.getElementById("message").innerText = "✅ Transaction Successfully Recorded!";
+                btn.disabled = false;
+            }, 1000);
+        }
+    </script>
+</body>
+</html>

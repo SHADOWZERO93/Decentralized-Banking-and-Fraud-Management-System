@@ -1,0 +1,31 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 50px;
+    background-color: #8ad7f1;
+    background-image: url(blockchain.jpg);
+    background-size: cover;
+    color: rgba(218, 251, 4, 0.925);
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    background-color: #08ecd5;
+    color: rgb(230, 16, 87);
+    border-radius: 5px;
+    margin: 10px;
+}
+
+button:hover {
+    background-color: #11e067;
+    color: #2d1ff0;
+}
+
+input {
+    padding: 10px;
+    font-size: 16px;
+    margin: 10px;
+}
